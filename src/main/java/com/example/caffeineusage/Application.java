@@ -17,14 +17,15 @@ public class Application implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
-        System.out.println("Hello world!");
+    public void run(ApplicationArguments args) {
+        System.out.println("Start to get user...");
         userService.getUser(1);
         userService.getUser(2);
         userService.getUser(3);
-
+        System.out.println("Get user again...");
         userService.getUser(1);
         userService.getUser(2);
         userService.getUser(3);
+        System.out.println("End.");
     }
 }

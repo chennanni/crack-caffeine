@@ -21,4 +21,13 @@ public class CacheConfig {
                 .maximumSize(1000)
                 .build();
     }
+
+    @Bean
+    public Cache<Integer, Object> caffeineCacheTiny() {
+        return Caffeine.newBuilder()
+                // 设置最后一次写入或访问后经过固定时间过期
+                .expireAfterWrite(1, TimeUnit.SECONDS)
+                .build();
+    }
+
 }
