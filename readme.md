@@ -56,11 +56,3 @@ End.
 ## 2. Caffeine的淘汰策略
 
 测试缓存过期的情况（基于时间淘汰）：基于`UserServiceTest`，在过期时间之后get同一个元素，不是直接从缓存中过去，而是从数据库中获取。
-
-## 3. Caffeine缓存自动加载
-
-在第一章节中，缓存是手动加载的，这一章节配置自动加载。
-
-## 4. Caffeine的性能测试
-
-对于同一组数据，对比`ConcurrentHashmap`和`Caffeine`的性能。
